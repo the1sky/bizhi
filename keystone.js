@@ -13,6 +13,7 @@ keystone.init({
 
 	'name': '百艺壁纸',
 	'brand': '百艺壁纸',
+	port:process.env.PORT || 80,
 	
 	'less': 'public',
 	'static': 'public',
