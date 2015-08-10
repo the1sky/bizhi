@@ -42,7 +42,7 @@ html
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
 
-			div(role="navigation").navbar.navbar-default
+			div(role="navigation").navbar.navbar-default.x-index-header
 				.container-fluid
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -50,19 +50,15 @@ html
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') bizhi
+						a.navbar-brand(href='/') 百艺壁纸
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
-
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label	
+						
+		#slide: .container
+			include ./slide.jade
+			
 		//- BODY
 		#body
 
@@ -80,12 +76,13 @@ html
 			//- The content block should contain the body of your template's content
 			block content
 
-
 		//- FOOTER
-		.container: #footer
+		#footer:.container 
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			p 聯系地址：香港九龍旺角道33號凱途發展大廈7樓04室 聯系電話：00852-30772883　傳真：00852-30772883 網站後台 
+			p 版權所有：山東省臨沂市禹基裝飾材料有限公司 魯ICP00001 制作維護：臨沂網商科技
+			p 友情合作： 臨沂網站制作
 
 
 		//- JAVASCRIPT
@@ -105,6 +102,8 @@ html
 			script(src='/keystone/js/content/editor.js')
 
 		//- Add scripts that are globally required by your site here.
+		script(src='/js/owl/owl.carousel.min.js')
+		script(src='/js/site.js')
 
 		//- Include template-specific javascript files by extending the js block
 		block js

@@ -11,8 +11,8 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'bizhi',
-	'brand': 'bizhi',
+	'name': '百艺壁纸',
+	'brand': '百艺壁纸',
 	
 	'less': 'public',
 	'static': 'public',
@@ -88,9 +88,13 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'galleries': 'galleries',
-	'enquiries': 'enquiries',
-	'users': 'users'
+	'客户留言':'enquiries',
+	'用户管理': 'users',
+	'首页slide':'slides',
+	'企业新闻':'news',
+	'企业文化':'cultures',
+	'产品展示':'presentations',
+	'企业概况':'overviews'
 });
 
 // Start Keystone to connect to your database and initialise the web server

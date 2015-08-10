@@ -24,9 +24,12 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	
 	locals.navLinks = [
-		{ label: 'Home',		key: 'home',		href: '/' },
-		{ label: 'Gallery',		key: 'gallery',		href: '/gallery' },
-		{ label: 'Contact',		key: 'contact',		href: '/contact' }
+		{ label: '主页',		key: 'home',		href: '/' },
+		{ label: '企业概况',		key: 'overview',		href: '/overview' },
+		{ label: '新闻资讯',		key: 'news',		href: '/news' },
+		{ label: '产品展示',		key: 'presentation',		href: '/presentation' },
+		{ label: '企业文化',		key: 'culture',		href: '/culture' },
+		{ label: '联系我们',		key: 'contact',		href: '/contact' },
 	];
 	
 	locals.user = req.user;
