@@ -1,0 +1,5 @@
+div#owl-carousel
+	if slides
+		each slide in slides
+			.item
+				img(src='images/upload/#{slide.url.filename}', alt='#{slide.name}')
