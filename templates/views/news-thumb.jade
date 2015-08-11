@@ -1,0 +1,22 @@
+.newsbox.panel.panel-default
+	.panel-heading
+		span.glyphicon.glyphicon-list-alt
+		b 企业新闻
+		div.news-more 查看更多
+	.panel-body
+		.row
+			.col-xs-12
+				ul.news-box
+					if news
+						each newI in news
+							li.news-item
+								table(cellpadding='4')
+									tbody 
+										tr 
+											td
+												img.img-circle(src='images/upload/news/#{newI.thumbimage.filename}', width='60')
+											td
+												| &nbsp;&nbsp;&nbsp;#{newI.name} &nbsp;&nbsp;&nbsp;
+												a(href='#') 点击阅读更多...
+						
+	.panel-footer  

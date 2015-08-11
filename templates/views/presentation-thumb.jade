@@ -1,0 +1,15 @@
+.newsbox.panel.panel-default
+	.panel-heading
+		span.glyphicon.glyphicon-list-alt
+		b 产品展示
+		div.news-more 查看更多
+	.panel-body
+		.row
+			.col-xs-12
+				div#owl-presentation
+					if slides
+						each slide in slides
+							.item
+								p
+									img(src='images/upload/#{slide.url.filename}', alt='#{slide.name}')
+	.panel-footer  

@@ -9,8 +9,9 @@ var Types = keystone.Field.Types;
 var News = new keystone.List('News');
 
 News.add({
-	name: { type: Types.Name, required: true },
-	content: { type: Types.Name },
+	name: { type: String, required: true },
+	thumbimage: { type: Types.LocalFile,dest:'./public/images/upload/news' },
+	content: { type: Types.Text },
 	date: { type: Types.Date }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true }
@@ -25,5 +26,5 @@ News.schema.virtual('canAccessKeystone').get(function() {
  * Registration
  */
 
-News.defaultColumns = 'name, content, isAdmin';
+News.defaultColumns = 'name, thumbimage,content, isAdmin';
 News.register();

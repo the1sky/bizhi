@@ -8,6 +8,16 @@ $(document).ready(function() {
 		autoPlay:true
 	});
 
+	$("#owl-presentation").owlCarousel({
+		singleItem:false,
+		autoPlay:true,
+		autoWidth:true,
+		items:3,
+		itemsDesktop : [1199,3],
+		itemsDesktopSmall : [979,3],
+		navigation : false
+	});
+
 	$(".news-box").bootstrapNews({
 		newsPerPage: 4,
 		autoplay: true,
