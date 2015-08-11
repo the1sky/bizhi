@@ -1,15 +1,14 @@
 extends ../layouts/default
 
 block content
-	.x-index-content-item: .container
-		img(src='/images/logo.svg', width='160')
-		p Welcome
-	.x-index-content-item: .container
-		img(src='/images/logo.svg', width='160')
-		p Welcome
-	.x-index-content-item: .container
-		img(src='/images/logo.svg', width='160')
-		p Welcome
-	.x-index-content-item: .container
-		img(src='/images/logo.svg', width='160')
-		p Welcome
+	.container
+		div.row
+			dov.col-md-6
+				include newsbox.jade
+			dov.col-md-6
+				include newsbox.jade
+		div.row
+			dov.col-md-6
+				include newsbox.jade
+			dov.col-md-6
+				include newsbox.jade

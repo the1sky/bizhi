@@ -7,4 +7,16 @@ $(document).ready(function() {
 		singleItem:true,
 		autoPlay:true
 	});
+
+	$(".news-box").bootstrapNews({
+		newsPerPage: 4,
+		autoplay: true,
+		pauseOnHover: true,
+		navigation: false,
+		direction: 'down',
+		newsTickerInterval: 2500,
+		onToDo: function () {
+			//console.log(this);
+		}
+	});
 });
