@@ -96,6 +96,7 @@ keystone.set('nav', {
 	'企业文化':'cultures',
 	'产品展示':'presentations',
 	'企业概况':'overviews',
+	'联系方式':'foots',
 	'企业logo':'logos'
 });
 
