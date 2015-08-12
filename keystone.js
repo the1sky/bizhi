@@ -95,7 +95,8 @@ keystone.set('nav', {
 	'企业新闻':'news',
 	'企业文化':'cultures',
 	'产品展示':'presentations',
-	'企业概况':'overviews'
+	'企业概况':'overviews',
+	'企业logo':'logos'
 });
 
 // Start Keystone to connect to your database and initialise the web server
