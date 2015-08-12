@@ -7,9 +7,8 @@
 		.row
 			.col-xs-12
 				div#owl-presentation
-					if slides
-						each slide in slides
+					if presentation
+						each item in presentation
 							.item
-								p
-									img(src='images/upload/#{slide.url.filename}', alt='#{slide.name}')
+								img.lazyOwl(data-src='images/upload/presentation/#{item.url.filename}', alt='#{item.name}')
 	.panel-footer  

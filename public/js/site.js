@@ -9,13 +9,10 @@ $(document).ready(function() {
 	});
 
 	$("#owl-presentation").owlCarousel({
-		singleItem:false,
-		autoPlay:true,
-		autoWidth:true,
-		items:3,
-		itemsDesktop : [1199,3],
-		itemsDesktopSmall : [979,3],
-		navigation : false
+		items:2,
+		pagination:false,
+		lazyLoad:true,
+		autoPlay:true
 	});
 
 	$(".news-box").bootstrapNews({

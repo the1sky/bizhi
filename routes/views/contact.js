@@ -33,7 +33,32 @@ exports = module.exports = function(req, res) {
 		});
 		
 	});
-	
-	view.render('contact');
-	
+
+	var global = 2;
+	var count = 0;
+	var output = {};
+
+	/**
+	 * 渲染
+	 * @param count
+	 */
+	var renderView = function(count){
+		if( count >= global ){
+			view.render('contact',output);
+		}
+	}
+	keystone.list('Foot' ).model.find().exec(function(err,data){
+		//get Foot and Render the view
+		//todo，填充默认值
+		output['foot'] = data ? data[0] : {};
+		count++;
+		renderView( count );
+	})
+	keystone.list('Logo' ).model.find().exec(function(err,data){
+		//get Logo and Render the view
+		//todo，填充默认值
+		output['logo'] = data ? data[0] : {};
+		count++;
+		renderView( count );
+	})
 };

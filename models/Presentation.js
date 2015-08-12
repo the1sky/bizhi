@@ -9,9 +9,8 @@ var Types = keystone.Field.Types;
 var Presentation = new keystone.List('Presentation');
 
 Presentation.add({
-	name: { type: Types.Name, required: true },
-	content: { type: Types.Name },
-	date: { type: Types.Date }
+	name: { type: String, required: true },
+	url: { type: Types.LocalFile,dest:'./public/images/upload/presentation' }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true }
 });

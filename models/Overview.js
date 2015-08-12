@@ -9,8 +9,9 @@ var Types = keystone.Field.Types;
 var Overview = new keystone.List('Overview');
 
 Overview.add({
-	name: { type: Types.Name, required: true },
-	content: { type: Types.Name },
+	name: { type: String, required: true },
+	thumbimage: { type: Types.LocalFile,dest:'./public/images/upload/overview' },
+	content: { type: Types.Text },
 	date: { type: Types.Date }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true }
@@ -25,5 +26,5 @@ Overview.schema.virtual('canAccessKeystone').get(function() {
  * Registration
  */
 
-Overview.defaultColumns = 'name, content, isAdmin';
+Overview.defaultColumns = 'name,thumbimage, content, isAdmin';
 Overview.register();

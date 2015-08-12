@@ -7,50 +7,16 @@
 		.row
 			.col-xs-12
 				ul.news-box
-					li.news-item
-						table(cellpadding='4')
-							tbody
-								tr
-									td
-										img.img-circle(src='images/1.png', width='60')
-									td
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-										a(href='#') Read more...
-					li.news-item
-						table(cellpadding='4')
-							tbody
-								tr
-									td
-										img.img-circle(src='images/2.png', width='60')
-									td
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-										a(href='#') Read more...
-					li.news-item
-						table(cellpadding='4')
-							tbody
-								tr
-									td
-										img.img-circle(src='images/3.png', width='60')
-									td
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-										a(href='#') Read more...
-					li.news-item
-						table(cellpadding='4')
-							tbody
-								tr
-									td
-										img.img-circle(src='images/4.png', width='60')
-									td
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-										a(href='#') Read more...
-					li.news-item
-						table(cellpadding='4')
-							tbody
-								tr
-									td
-										img.img-circle(src='images/5.png', width='60')
-									td
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-										a(href='#') Read more...
+					if news
+						each item in overview
+							li.news-item
+								table(cellpadding='4')
+									tbody
+										tr
+											td
+												img.img-circle(src='images/upload/overview/#{item.thumbimage.filename}', width='60')
+											td
+												| &nbsp;&nbsp;&nbsp;#{item.name} &nbsp;&nbsp;&nbsp;
+												a(href='#') 点击阅读更多...
 	.panel-footer  
 
