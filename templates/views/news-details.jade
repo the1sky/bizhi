@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block content
+		if news
+			each newsI in news
+				div.article-details
+					div.article-head
+						span.article-title #{newsI.name}
+					pre #{newsI.content}
+
+block slide
+	include slide.jade
+block foot
+	include foot.jade

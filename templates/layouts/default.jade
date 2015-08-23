@@ -58,7 +58,8 @@ html
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label	
 						
 		#slide: .container
-			include ./slide.jade
+			
+			block slide
 			
 		//- BODY
 		#body

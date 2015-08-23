@@ -40,6 +40,7 @@ exports = module.exports = function(app) {
 	app.all('/contact', routes.views.contact);
 	app.all('/slide', routes.views.slide);
 	app.all('/news', routes.views.news);
+	app.get('/news-details', routes.views.news_details);
 	app.all('/presentation', routes.views.presentation);
 	app.all('/culture', routes.views.culture);
 	
