@@ -11,7 +11,7 @@ var Culture = new keystone.List('Culture');
 Culture.add({
 	name: { type: String, required: true },
 	thumbimage: { type: Types.LocalFile,dest:'./public/images/upload/culture' },
-	content: { type: Types.Text },
+	content: { type: Types.Html },
 	date: { type: Types.Date }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true }
