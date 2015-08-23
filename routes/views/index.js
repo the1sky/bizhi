@@ -27,21 +27,21 @@ exports = module.exports = function(req, res) {
 		count++;
 		renderView( count );
 	});
-	keystone.list('News' ).model.find().exec(function(err,data){
+	keystone.list('News' ).model.find().limit(4).exec(function(err,data){
 		//get News and Render the view
 		//todo，填充默认值
 		output['news'] = data;
 		count++;
 		renderView( count );
 	})
-	keystone.list('Culture' ).model.find().exec(function(err,data){
+	keystone.list('Culture' ).model.find().limit(4).exec(function(err,data){
 		//get Culture and Render the view
 		//todo，填充默认值
 		output['culture'] = data;
 		count++;
 		renderView( count );
 	})
-	keystone.list('Overview' ).model.find().exec(function(err,data){
+	keystone.list('Overview' ).model.find().limit(4).exec(function(err,data){
 		//get Overview and Render the view
 		//todo，填充默认值
 		output['overview'] = data;
