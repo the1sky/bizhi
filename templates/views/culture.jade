@@ -1,13 +1,11 @@
 extends ../layouts/default
 
-block intro
-	.container
-	
 block content
 	.container
+		include list.jade
 
-block slide
-	include ./slide.jade
-		
 block foot
 	include foot.jade
+block js 
+	script(src='/js/jquery.dataTables.min.js')
+	script(src='/js/table-list.js')

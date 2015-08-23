@@ -1,0 +1,12 @@
+if list
+	div
+		table#table-list.display
+			thead
+				tr
+					th
+			tbody
+				each item in list
+					tr
+						td  
+							a(href='/#{list_type}?id=#{item.id}') #{item.name}
+
