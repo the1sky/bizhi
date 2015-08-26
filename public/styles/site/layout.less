@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'ZHGF';
+  src: url('/fonts/ZHGF.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #header {
   margin-top: 30px;
   .x-index-header {
@@ -102,10 +109,11 @@ table.dataTable.no-footer {
 }
 
 #enter {
-  min-width: 800px;
-  margin: 0 10%;
+  font-family: 'ZHGF';
+  min-width: 400px;
+  margin: 0;
   margin-top: 6%;
-  font-size: 35px;
+  font-size: 30px;
   .row {
 	text-align: center;
 	margin-top: 20px;
@@ -119,24 +127,24 @@ table.dataTable.no-footer {
 	margin-top: 0;
   }
   .version {
-	margin-top: 10%;
+	margin-top: 6%;
 	.chinese {
 	  display: inline-block;
-	  font-size: 32px;
+	  font-size: 24px;
 	  margin-right: 25px;
 	  border: 1px solid #eee;
 	  padding: 5px 30px;
 	}
 	.english {
 	  display: inline-block;
-	  font-size: 32px;
+	  font-size: 24px;
 	  margin-left: 25px;
 	  border: 1px solid #eee;
 	  padding: 5px 30px;
 	}
   }
   .phone {
-	margin-top: 8%;
+	margin-top: 6%;
 
 	.phone-icon {
 	  display: inline-block;
@@ -149,11 +157,11 @@ table.dataTable.no-footer {
 	}
 	.phone-content {
 	  display: inline-block;
-	  font-size: 30px
+	  font-size: 25px
 	}
   }
   .welcome {
-	font-size: 30px;
+	font-size: 25px;
   }
 
   a:link {
@@ -161,6 +169,8 @@ table.dataTable.no-footer {
   }
   a:visited {
 	color: #000;
+  }
+  a:hover {  
   }
 }
 
