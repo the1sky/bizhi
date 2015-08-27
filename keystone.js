@@ -13,11 +13,11 @@ keystone.init({
 
 	'name': '百艺壁纸',
 	'brand': '百艺壁纸',
-	port:process.env.PORT || 80,
+	port:process.env.PORT || 8000,
 	
 	'less': 'public',
 	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	'favicon': 'public/baiyi_favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
 	

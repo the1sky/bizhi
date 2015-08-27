@@ -1,13 +1,15 @@
 extends ../layouts/default
-
-block intro
-	.container
 	
 block content
 	.container
-		
-block slide
-	include slide.jade
+		include presentation-gallery.jade
 		
 block foot
 	include foot.jade
+		
+block js
+	script(src='/js/jquery.quicksand.js')
+	script(src='/js/presentation.js')
+		
+block css
+	link(href="/styles/presentation.css", rel="stylesheet")

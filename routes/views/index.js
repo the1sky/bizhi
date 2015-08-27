@@ -50,8 +50,17 @@ exports = module.exports = function(req, res) {
 	})
 	keystone.list('Presentation' ).model.find().exec(function(err,data){
 		//get Presentation and Render the view
-		//todo，填充默认值
-		output['presentation'] = data;
+		var newData = [];
+		var len = data.length;
+		for( var i=0; i < len; i++ ){
+			var imageGroup = data[i];
+			var localFilesLen = imageGroup.localFiles ? imageGroup.localFiles.length : 0;
+			for( var j=0; j< localFilesLen;j++ ){
+				newData.push( imageGroup.localFiles[j]);
+			}
+		}
+		newData = newData.slice(0,20);
+		output['presentation'] = newData;;
 		count++;
 		renderView( count );
 	})

@@ -10,7 +10,13 @@ var Presentation = new keystone.List('Presentation');
 
 Presentation.add({
 	name: { type: String, required: true },
-	url: { type: Types.LocalFile,dest:'./public/images/upload/presentation' }
+	localFiles: { 
+		type: Types.LocalFiles,
+		dest:'./public/images/upload/presentation',
+		prefix:'/multiple',
+		format:function(item,file){
+			return '<img src="' + file.href + '" style="max-width:300px">'
+		}}
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true }
 });
@@ -24,5 +30,5 @@ Presentation.schema.virtual('canAccessKeystone').get(function() {
  * Registration
  */
 
-Presentation.defaultColumns = 'name, content, isAdmin';
+Presentation.defaultColumns = 'name, localFiles, isAdmin';
 Presentation.register();

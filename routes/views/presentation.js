@@ -21,13 +21,13 @@ exports = module.exports = function(req, res) {
 			view.render('presentation',output);
 		}
 	}
-
-	keystone.list('Slide' ).model.find().exec(function(err,data){
+	keystone.list('Presentation' ).model.find().exec(function(err,data){
 		//get Slide and Render the view
-		output['slides'] = data;
+		output['list'] = data;
 		count++;
 		renderView( count );
 	});
+
 	keystone.list('Foot' ).model.find().exec(function(err,data){
 		//get Foot and Render the view
 		//todo，填充默认值
