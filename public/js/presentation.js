@@ -29,7 +29,7 @@ $(document).ready(function(){
 	});
 
 	// Creating the "Everything" option in the menu:
-	createList('Everything',items);
+	createList('所有',items);
 
 	// Looping though the arrays in itemsByTags:
 	$.each(itemsByTags,function(k,v){

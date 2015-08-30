@@ -23,7 +23,24 @@ exports = module.exports = function(req, res) {
 	}
 	keystone.list('Presentation' ).model.find().exec(function(err,data){
 		//get Slide and Render the view
-		output['list'] = data;
+		var newData = [];
+		var len = data.length;
+		for( var i=0; i<len; i++ ){
+			var categoryItem = data[i];
+			if( categoryItem.localFiles && categoryItem.localFiles.length > 0 ){
+				var name = categoryItem.name;
+				var localFilesLen = categoryItem.localFiles.length;
+				for( var j = 0; j< localFilesLen;j++){
+					var item = categoryItem.localFiles[j];
+					var outputItem = {
+						name:name,
+						path:'images/upload/presentation/' + item.filename
+					};
+					newData.push( outputItem );
+				}
+			}
+		}
+		output['list'] = newData;
 		count++;
 		renderView( count );
 	});

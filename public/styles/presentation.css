@@ -22,7 +22,7 @@ a:hover{
 	margin-bottom: 20px;
 	position: relative;
 	width: 600px;
-	text-align:center;
+	text-align:left;
 }
 
 
@@ -70,6 +70,11 @@ a:hover{
 	-moz-box-shadow: 0 0 5px #000;
 	-webkit-box-shadow: 0 0 5px #000;
 	box-shadow: 0 0 5px #000;
+}
+
+#container li img {
+	width: 125px;
+	height: 96px;
 }
 
 #container ul{
