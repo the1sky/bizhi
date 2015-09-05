@@ -63,11 +63,12 @@ $(document).ready(function(){
 			// Creating a copy of each li item
 			// and adding it to the list:
 			
-			$(this).clone().appendTo(ul);
+			var clone = $(this ).clone();
+			clone.appendTo(ul);
 		});
 
 		ul.appendTo('#container');
-
+		
 		// Creating a menu item. The unordered list is added
 		// as a data parameter (available via .data('list'):
 		

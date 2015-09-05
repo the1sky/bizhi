@@ -17,9 +17,9 @@ a:hover{
 	background: url("../img/bar.png") repeat-x 0 -94px;
 	display: block;
 	height: 39px;
-	margin: 55px auto;
 	margin-top: 0;
 	margin-bottom: 20px;
+	margin-left: 45px;
 	position: relative;
 	width: 600px;
 	text-align:left;
@@ -54,7 +54,6 @@ a:hover{
 #container{
 	display:block;
 	overflow:hidden;
-	width: 830px;
 	margin:0 auto;
 }
 
@@ -72,6 +71,12 @@ a:hover{
 	box-shadow: 0 0 5px #000;
 }
 
+#container li a {
+	display: block;
+	width: 125px;
+	height: 96px;
+}
+
 #container li img {
 	width: 125px;
 	height: 96px;
@@ -84,5 +89,6 @@ a:hover{
 #container ul.hidden{
 	display:none;
 }
+
 
 

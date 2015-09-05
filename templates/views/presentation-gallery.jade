@@ -3,5 +3,6 @@ section#container
 	ul#stage
 		if list 
 			each item in list
-					li(data-tags="#{item.name}")
+				li(data-tags="#{item.name}")
+					a(href="/presentation-details?tag=#{item.name}&name=#{item.filename}")
 						img(src="#{item.path}")

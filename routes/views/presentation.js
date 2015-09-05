@@ -34,6 +34,7 @@ exports = module.exports = function(req, res) {
 					var item = categoryItem.localFiles[j];
 					var outputItem = {
 						name:name,
+						filename:item.filename,
 						path:'images/upload/presentation/' + item.filename
 					};
 					newData.push( outputItem );
