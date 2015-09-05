@@ -3,15 +3,16 @@ extends ../layouts/default
 block content
 	.container
 		div.row
-			dov.col-md-6
-				include news-thumb.jade
-			dov.col-md-6
-				include presentation-thumb.jade
-		div.row
-			dov.col-md-6
-				include overview-thumb.jade
-			dov.col-md-6
-				include culture-thumb.jade
+			div.col-md-6
+				div.row.sub
+					include news-thumb.jade
+				div.row.sub
+					include  overview-thumb
+			div.col-md-6
+				div.row.sub
+					include presentation-thumb.jade
+				div.row.sub
+					include culture-thumb.jade
 block slide
 	include ./slide.jade
 

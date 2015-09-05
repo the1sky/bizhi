@@ -2,7 +2,8 @@ extends ../layouts/default
 
 block content
 	.container
-		include list.jade
+		#overview-details
+			pre #{overview.content}
 
 block foot
 	include foot.jade

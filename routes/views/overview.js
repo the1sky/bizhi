@@ -22,10 +22,9 @@ exports = module.exports = function(req, res) {
 		}
 	}
 
-	keystone.list('Overview' ).model.find().exec(function(err,data){
+	keystone.list('Overview' ).model.find().limit(1).exec(function(err,data){
 		//get Slide and Render the view
-		output['list'] = data;
-		output['list_type'] = 'overview-details';
+		output['overview'] = data[0];
 		count++;
 		renderView( count );
 	});

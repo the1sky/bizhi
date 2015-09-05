@@ -41,9 +41,17 @@ exports = module.exports = function(req, res) {
 		count++;
 		renderView( count );
 	})
-	keystone.list('Overview' ).model.find().limit(4).exec(function(err,data){
+	keystone.list('Overview' ).model.find().limit(1).exec(function(err,data){
 		//get Overview and Render the view
 		//todo，填充默认值
+		if( data[0] ){
+			var content = data[0].content;
+			if( content.length > 100 ) {
+				content = content.substr(0,100);
+				content += '...';
+			}
+			data[0].content = content;
+		}
 		output['overview'] = data;
 		count++;
 		renderView( count );
@@ -75,7 +83,6 @@ exports = module.exports = function(req, res) {
 		//get Logo and Render the view
 		//todo，填充默认值
 		output['logo'] = data ? data[0] : {};
-		console.log(output['logo']);
 		count++;
 		renderView( count );
 	})

@@ -15,7 +15,7 @@ $(document).ready(function() {
 		autoPlay:true
 	});
 
-	$(".news-box").bootstrapNews({
+	$(".news-box.autorun").bootstrapNews({
 		newsPerPage: 4,
 		autoplay: true,
 		pauseOnHover: true,

@@ -8,16 +8,13 @@
 		.row
 			.col-xs-12
 				ul.news-box
-					if news
+					if overview
 						each item in overview
 							li.news-item
 								table(cellpadding='4')
 									tbody
 										tr
 											td
-												img.img-circle(src='images/upload/overview/#{item.thumbimage.filename}', width='60')
-											td
-												| &nbsp;&nbsp;&nbsp;#{item.name} &nbsp;&nbsp;&nbsp;
-												a(href='/overview-details?id=#{item.id}') 点击阅读更多...
+												| #{item.content}
 	.panel-footer  
 
