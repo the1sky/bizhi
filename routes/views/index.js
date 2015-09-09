@@ -75,7 +75,9 @@ exports = module.exports = function(req, res) {
 	keystone.list('Foot' ).model.find().exec(function(err,data){
 		//get Foot and Render the view
 		//todo，填充默认值
-		output['foot'] = data ? data[0] : {};
+		var res = data ? data[0] : {};
+		output['foot'] = res;
+		output['contactme'] = res;
 		count++;
 		renderView( count );
 	})

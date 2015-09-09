@@ -10,11 +10,6 @@
 				ul.news-box
 					if overview
 						each item in overview
-							li.news-item
-								table(cellpadding='4')
-									tbody
-										tr
-											td
-												| #{item.content}
+							#{item.content}
 	.panel-footer  
 
