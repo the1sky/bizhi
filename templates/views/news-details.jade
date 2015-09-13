@@ -8,6 +8,8 @@ block content
 					div.article-head
 						span.article-title #{newsI.name}
 					pre #{newsI.content}
+					div.article-img
+						img(src='images/upload/news/#{newsI.thumbimage.filename}')
 
 block slide
 	include slide.jade

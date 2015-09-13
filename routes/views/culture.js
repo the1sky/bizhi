@@ -22,10 +22,9 @@ exports = module.exports = function(req, res) {
 		}
 	}
 
-	keystone.list('Culture' ).model.find().exec(function(err,data){
+	keystone.list('Culture' ).model.find().limit(1).exec(function(err,data){
 		//get Slide and Render the view
-		output['list'] = data;
-		output['list_type'] = 'culture-details';
+		output['culture'] = data[0];
 		count++;
 		renderView( count );
 	});

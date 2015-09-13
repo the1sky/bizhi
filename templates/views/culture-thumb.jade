@@ -2,22 +2,14 @@
 	.panel-heading
 		span.glyphicon.glyphicon-list-alt
 		b 企业文化
-		div.news-more 
+		div.news-more
 			a(href='/culture') 查看更多
 	.panel-body
 		.row
 			.col-xs-12
-				ul.news-box.autorun
+				ul.news-box
 					if news
-						each item in culture
-							li.news-item
-								table(cellpadding='4')
-									tbody
-										tr
-											td
-												img.img-circle(src='images/upload/culture/#{item.thumbimage.filename}', width='60')
-											td
-												| &nbsp;&nbsp;&nbsp;#{item.name} &nbsp;&nbsp;&nbsp;
-												a(href='/culture-details?id=#{item.id}') 点击阅读更多...
+						each item in overview
+							#{item.content}
 	.panel-footer  
 

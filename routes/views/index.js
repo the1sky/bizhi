@@ -29,21 +29,26 @@ exports = module.exports = function(req, res) {
 	});
 	keystone.list('News' ).model.find().limit(4).exec(function(err,data){
 		//get News and Render the view
-		//todo，填充默认值
 		output['news'] = data;
 		count++;
 		renderView( count );
 	})
-	keystone.list('Culture' ).model.find().limit(4).exec(function(err,data){
+	keystone.list('Culture' ).model.find().limit(1).exec(function(err,data){
 		//get Culture and Render the view
-		//todo，填充默认值
+		if( data[0] ){
+			var content = data[0].content;
+			if( content.length > 100 ) {
+				content = content.substr(0,100);
+				content += '...';
+			}
+			data[0].content = content;
+		}
 		output['culture'] = data;
 		count++;
 		renderView( count );
 	})
 	keystone.list('Overview' ).model.find().limit(1).exec(function(err,data){
 		//get Overview and Render the view
-		//todo，填充默认值
 		if( data[0] ){
 			var content = data[0].content;
 			if( content.length > 100 ) {

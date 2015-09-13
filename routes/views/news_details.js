@@ -24,11 +24,10 @@ exports = module.exports = function(req, res) {
 	}
 	var newsId = req.query.id;
     keystone.list('News' ).model.find({_id:newsId}).exec(function(err,data){
-            //get News and Render the view
-            //todo，填充默认值
-            output['news'] = data;
-            count++;
-            renderView( count );
+        //get News and Render the view
+        output['news'] = data;
+        count++;
+        renderView( count );
 	});
 	keystone.list('Foot' ).model.find().exec(function(err,data){
 		//get Foot and Render the view

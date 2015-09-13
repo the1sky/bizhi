@@ -2,10 +2,8 @@ extends ../layouts/default
 
 block content
 	.container
-		include list.jade
+		#culture-details
+			pre #{culture.content}
 
 block foot
 	include foot.jade
-block js 
-	script(src='/js/jquery.dataTables.min.js')
-	script(src='/js/table-list.js')
