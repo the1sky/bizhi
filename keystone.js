@@ -11,13 +11,13 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': '百艺壁纸',
-	'brand': '百艺壁纸',
-	port:process.env.PORT || 8000,
+	'name': 'qiran',
+	'brand': '其冉壁纸',
+	port:process.env.PORT || 8001,
 	
 	'less': 'public',
 	'static': 'public',
-	'favicon': 'public/baiyi_favicon.ico',
+	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
 	
