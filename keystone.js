@@ -11,9 +11,9 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'qiran',
-	'brand': '其冉壁纸',
-	port:process.env.PORT || 8001,
+	'name': 'baiyi',
+	'brand': '百艺壁纸',
+	port:process.env.PORT || 8000,
 	
 	'less': 'public',
 	'static': 'public',
