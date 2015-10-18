@@ -3,7 +3,8 @@ extends ../layouts/default
 block content
 	.container
 		#culture-details
-			pre #{culture.content}
+			if culture
+				pre #{culture.content}
 
 block foot
 	include foot.jade
